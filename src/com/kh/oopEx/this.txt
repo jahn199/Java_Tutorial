@@ -1,0 +1,36 @@
+this.
+현재 class 객체에 존재하는 필드를 참조하는 키워드
+객체의 인스턴스 변수와 메서드를 참조하거나 호출하는데 사용
+주로 변수명 충돌 해결하거나 메서드 연결을 위해 사용
+
+*인스턴스 변수 = 필드 = 멤버 변수 = 전역 변수 = 속성
+
+class Student{
+    String name;//멤버변수 인스턴스변수 필드 전역변수 속성
+
+    Student(String name){//String name = 매개변수명 파라미터이름 지역변수 로컬변수
+    this.name = name;
+    //this.name은 class Student 바로 아래에 있는 필드를 바라보는 것
+    // name은 Student(String name)을 바라보는 것
+    }
+}
+
+this()
+현재 클래스에서 다른 생성자를 호출할 때 사용
+기본 생성자에서 this() 호출시 반드시 맨 위에 작성
+
+class Student{
+    String name;
+
+    //기본생성자에서 name에 직접적으로 값을 넣어줌
+    Student() {
+    this("홍길동");
+    }
+}
+
+아래 코드와 동일함
+다른점은 위 아래 코드 모두 홍길동이 변화할 수 있지만 변화 방식이 다름
+
+class Student{
+    String name = "홍길동";
+}

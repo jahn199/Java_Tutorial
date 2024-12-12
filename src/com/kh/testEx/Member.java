@@ -40,6 +40,6 @@ public class Member {
     }
 
     public boolean login(String id, String password) {
-        return false;
+        return this.id.equals(id) && this.password.equals(password);
     }
 }
